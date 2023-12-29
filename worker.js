@@ -30,19 +30,21 @@ self.addEventListener('message', async (event) => {
     src_lang: event.data.src_lang,
 
     // Allows for partial output
-    callback_function: (x) => {
-      self.postMessage({
-        status: 'update',
-        output: translator.tokenizer.decode(x[0].output_token_ids, {
-          skip_special_tokens: true,
-        }),
-      });
-    },
+    // callback_function: (x) => {
+    //   self.postMessage({
+    //     status: 'update',
+    //     output: translator.tokenizer.decode(x[0].output_token_ids, {
+    //       skip_special_tokens: true,
+    //     }),
+    //   });
+    // },
   });
 
   // Send the output back to the main thread
   self.postMessage({
     status: 'complete',
     output: output,
+    input: event.data.text,
+    order: event.data.order,
   });
 });

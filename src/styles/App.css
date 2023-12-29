@@ -24,6 +24,14 @@
   width: 800px;
 }
 
+.btn-container {
+  padding-left: 25.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 20px;
+}
+
 .textbox-container > textarea,
 .language-selector {
   width: 50%;

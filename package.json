@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supercharge/fs": "^3.4.0",
+    "@supercharge/strings": "^2.0.0",
     "@xenova/transformers": "^2.13.0",
     "next": "14.0.4",
     "react": "^18",
