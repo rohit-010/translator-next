@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   env: {
     WORD_COUNT: 100,
-    TRANSLATE_API: `http://localhost:5700/translate`,
+    TRANSLATE_API: `https://translator-api-nsp0.onrender.com/translate`,
   },
 };
 
