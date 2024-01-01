@@ -89,10 +89,10 @@ function App() {
         <div className="textbox-container">
           <textarea
             value={input}
-            rows={3}
+            rows={5}
             onChange={(e) => setInput(e.target.value)}
           ></textarea>
-          <textarea value={output} rows={3} readOnly></textarea>
+          <textarea value={output} rows={5} readOnly></textarea>
         </div>
       </div>
       <div className="btn-container">

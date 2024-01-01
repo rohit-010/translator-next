@@ -21,7 +21,8 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  width: 800px;
+  width: 65rem;
+  height: 20rem;
 }
 
 .btn-container {
@@ -29,7 +30,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  width: 20px;
+  width: 16.5rem;
 }
 
 .textbox-container > textarea,
@@ -117,5 +118,22 @@
     color: rgb(11, 7, 24);
     opacity: 0.6;
     top: 0px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+  .textbox-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    width: 45rem;
+  }
+
+  .btn-container {
+    padding-left: 13.7rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    width: 20.5rem;
   }
 }
