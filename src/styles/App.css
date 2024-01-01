@@ -137,3 +137,20 @@
     width: 20.5rem;
   }
 }
+
+@media (min-width: 320px) and (max-width: 400px) {
+  .textbox-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 35rem;
+  }
+
+  .btn-container {
+    padding-left: 10.7rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 17.5rem;
+  }
+}

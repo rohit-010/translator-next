@@ -85,23 +85,6 @@ button:focus-visible {
   }
 }
 
-@media (min-width: 320px) and (max-width: 400px) {
-  body {
-    margin: 0;
-    display: flex;
-    place-items: center;
-    min-width: max-content;
-    min-height: 100vh;
-    background-image: -webkit-linear-gradient(
-      to right,
-      rgb(148, 189, 212),
-      rgb(147, 115, 124)
-    );
-    background-repeat: repeat;
-    background-color: #cccccc;
-  }
-}
-
 @media (min-width: 400px) and (max-width: 600px) {
   body {
     margin: 0;
@@ -124,5 +107,31 @@ button:focus-visible {
     width: 21em;
     margin: 4px;
     margin-left: 10rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+  body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: max-content;
+    min-height: 100vh;
+    background-image: -webkit-linear-gradient(
+      to right,
+      rgb(148, 189, 212),
+      rgb(147, 115, 124)
+    );
+    background-repeat: repeat;
+    background-color: #cccccc;
+  }
+  h1 {
+    font-size: 1.2em;
+    line-height: 0.4;
+  }
+  h2 {
+    width: 17em;
+    margin: 2px;
+    margin-left: 6rem;
   }
 }
