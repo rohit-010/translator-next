@@ -83,3 +83,39 @@
   flex-direction: column;
   gap: 10px;
 }
+
+.translation-header {
+  position: relative;
+  animation: move-header 3s;
+  animation-direction: normal;
+}
+
+@keyframes move-header {
+  0% {
+    color: rgb(201, 62, 27);
+    opacity: 0.2;
+    top: -300px;
+  }
+
+  50% {
+    color: rgb(48, 46, 155);
+    opacity: 0.4;
+    top: -150px;
+  }
+  /* 25% {
+    background: rgb(167, 167, 89);
+    left: 200px;
+    top: -100px;
+  }
+
+  75% {
+    background: rgb(96, 151, 96);
+    left: 50px;
+    top: 200px;
+  } */
+  100% {
+    color: rgb(11, 7, 24);
+    opacity: 0.6;
+    top: 0px;
+  }
+}

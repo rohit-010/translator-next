@@ -18,6 +18,14 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: url(../../public/images/world-lang.jpeg);
+  background-image: linear-gradient(
+    to right,
+    rgb(148, 189, 212),
+    rgb(147, 115, 124)
+  );
+  background-repeat: repeat;
+  background-color: #cccccc;
 }
 
 h1 {

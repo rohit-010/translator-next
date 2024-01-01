@@ -1,8 +1,8 @@
 import { pipeline } from '@xenova/transformers';
 
-class MyTranslationPipeline {
+class TranslationPipeline {
   static task = 'translation';
-  static model = 'Xenova/nllb-200-distilled-600M';
+  static model = 'Xenova/mbart-large-50-many-to-one-mmt';
   // static model = 'Xenova/mbart-large-50-many-to-many-mmt';
   // static model = 'facebook/nllb-200-distilled-600M';
   static instance = null;
@@ -19,7 +19,7 @@ class MyTranslationPipeline {
 self.addEventListener('message', async (event) => {
   // Retrieve translation pipeline when called for first time,
   // this will load pipeline and save it for future use
-  let translator = await MyTranslationPipeline.getInstance((x) => {
+  let translator = await TranslationPipeline.getInstance((x) => {
     // we also add progress callback to the pipeline so that we can
     // track model loading
     self.postMessage(x);
@@ -29,16 +29,6 @@ self.addEventListener('message', async (event) => {
   let output = await translator(event.data.text, {
     tgt_lang: event.data.tgt_lang,
     src_lang: event.data.src_lang,
-
-    // Allows for partial output
-    // callback_function: (x) => {
-    //   self.postMessage({
-    //     status: 'update',
-    //     output: translator.tokenizer.decode(x[0].output_token_ids, {
-    //       skip_special_tokens: true,
-    //     }),
-    //   });
-    // },
   });
 
   // Send the output back to the main thread
