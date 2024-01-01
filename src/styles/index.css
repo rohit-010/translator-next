@@ -12,20 +12,55 @@
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  background: url(../../public/images/world-lang.jpeg);
-  background-image: linear-gradient(
-    to right,
-    rgb(148, 189, 212),
-    rgb(147, 115, 124)
-  );
-  background-repeat: repeat;
-  background-color: #cccccc;
+@media only screen and (min-width: 768px) {
+  body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: max-content;
+    min-height: 100vh;
+    background: url(../../public/images/world-lang.jpeg);
+    background-image: linear-gradient(
+      to right,
+      rgb(148, 189, 212),
+      rgb(147, 115, 124)
+    );
+    background-repeat: repeat;
+    background-color: #cccccc;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+  body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: max-content;
+    min-height: 100vh;
+    background-image: -webkit-linear-gradient(
+      to right,
+      rgb(148, 189, 212),
+      rgb(147, 115, 124)
+    );
+    background-repeat: repeat;
+    background-color: #cccccc;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+  body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: max-content;
+    min-height: 100vh;
+    background-image: linear-gradient(
+      to right,
+      rgb(148, 189, 212),
+      rgb(147, 115, 124)
+    );
+    background-color: #cccccc;
+  }
 }
 
 h1 {
